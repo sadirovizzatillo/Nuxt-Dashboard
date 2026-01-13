@@ -166,6 +166,9 @@
     "settings": "Sozlamalar",
     "profile": "Profil"
   },
+  "profile": {
+    "subtitle": "Shaxsiy ma'lumotlaringizni ko'ring va boshqaring"
+  },
   "table": {
     "productName": "Mahsulot nomi",
     "location": "Joylashuv",

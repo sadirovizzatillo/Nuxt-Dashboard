@@ -96,8 +96,19 @@ export const useUsersStore = defineStore('users', {
           method: 'POST',
           body: user,
         })
-        this.users.unshift(response)
-        return response
+
+        // DummyJSON returns partial data, merge with input to keep all fields
+        // Generate unique local ID to avoid conflicts
+        const maxId = Math.max(...this.users.map(u => u.id), 0)
+        const newUser: UserData = {
+          ...user,
+          ...response,
+          id: maxId + 1, // Use local unique ID
+        }
+
+        this.users.unshift(newUser)
+        this.total += 1
+        return newUser
       } catch (error: any) {
         this.error = error.message || 'Failed to add user'
         throw error
@@ -116,13 +127,19 @@ export const useUsersStore = defineStore('users', {
           method: 'PUT',
           body: user,
         })
-        
+
         const index = this.users.findIndex(u => u.id === id)
         if (index !== -1) {
-          this.users[index] = response
+          // DummyJSON returns partial data, merge with existing to keep all fields
+          this.users[index] = {
+            ...this.users[index],
+            ...user,
+            ...response,
+            id, // Ensure ID stays the same
+          }
         }
-        
-        return response
+
+        return this.users[index]
       } catch (error: any) {
         this.error = error.message || 'Failed to update user'
         throw error
@@ -140,8 +157,9 @@ export const useUsersStore = defineStore('users', {
         await apiFetch(`/users/${id}`, {
           method: 'DELETE',
         })
-        
+
         this.users = this.users.filter(u => u.id !== id)
+        this.total = Math.max(0, this.total - 1)
       } catch (error: any) {
         this.error = error.message || 'Failed to delete user'
         throw error

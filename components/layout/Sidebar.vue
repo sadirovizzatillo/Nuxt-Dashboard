@@ -1,11 +1,11 @@
 <template>
-  <!-- Mobile Drawer -->
+  <!-- Mobile/Tablet Drawer -->
   <a-drawer
     v-model:open="mobileMenuOpen"
     placement="left"
     :closable="false"
     :width="250"
-    class="mobile-drawer md:hidden"
+    class="mobile-drawer lg:hidden"
     :body-style="{ padding: 0 }"
     :header-style="{ display: 'none' }"
   >
@@ -56,14 +56,14 @@
     </div>
   </a-drawer>
 
-  <!-- Desktop Sidebar -->
+  <!-- Desktop Sidebar (visible on lg and up) -->
   <a-layout-sider
     v-model:collapsed="collapsed"
     :trigger="null"
     collapsible
     :width="250"
     :collapsed-width="80"
-    class="sidebar !bg-white dark:!bg-[#273142] hidden md:block"
+    class="sidebar !bg-white dark:!bg-[#273142] hidden lg:block"
     :style="{
       overflow: 'auto',
       height: '100vh',

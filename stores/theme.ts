@@ -61,7 +61,8 @@ export const useThemeStore = defineStore('theme', {
       if (process.client) {
         const savedTheme = localStorage.getItem('theme') as Theme
         const savedSidebarState = localStorage.getItem('sidebarCollapsed')
-        
+        const isTabletOrMobile = window.innerWidth < 1024
+
         if (savedTheme) {
           this.theme = savedTheme
         } else {
@@ -69,11 +70,15 @@ export const useThemeStore = defineStore('theme', {
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
           this.theme = prefersDark ? 'dark' : 'light'
         }
-        
-        if (savedSidebarState !== null) {
+
+        // On tablet/mobile, always keep sidebar collapsed (use drawer instead)
+        if (isTabletOrMobile) {
+          this.sidebarCollapsed = true
+          this.mobileMenuOpen = false
+        } else if (savedSidebarState !== null) {
           this.sidebarCollapsed = savedSidebarState === 'true'
         }
-        
+
         this.applyTheme()
       }
     },

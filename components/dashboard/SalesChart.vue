@@ -19,9 +19,9 @@ import { Line } from 'vue-chartjs'
 const themeStore = useThemeStore()
 
 const chartData = computed(() => ({
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  labels: ['Yan', 'Fev', 'Mar', 'Apr', 'May', 'Iyun', 'Iyul', 'Avg', 'Sen', 'Okt', 'Noy', 'Dek'],
   datasets: [{
-    label: 'Sales',
+    label: 'Sotuvlar',
     data: [30, 40, 35, 50, 49, 60, 70, 91, 125, 135, 150, 160],
     borderColor: '#4f46e5',
     backgroundColor: themeStore.isDark ? 'rgba(79, 70, 229, 0.1)' : 'rgba(79, 70, 229, 0.05)',

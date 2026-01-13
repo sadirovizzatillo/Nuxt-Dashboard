@@ -148,11 +148,11 @@
             <div class="demo-content">
               <div class="demo-row">
                 <span class="demo-label">{{ t('auth.username') }}:</span>
-                <code class="demo-value">emilys</code>
+                <code class="demo-value">emmaj</code>
               </div>
               <div class="demo-row">
                 <span class="demo-label">{{ t('auth.password') }}:</span>
-                <code class="demo-value">emilyspass</code>
+                <code class="demo-value">emmajpass</code>
               </div>
             </div>
           </div>
@@ -188,8 +188,8 @@ const { t, locale } = useI18n()
 
 const formRef = ref(null)
 const formState = reactive({
-  username: 'emilys',
-  password: 'emilyspass',
+  username: 'emmaj',
+  password: 'emmajpass',
   rememberMe: false,
 })
 

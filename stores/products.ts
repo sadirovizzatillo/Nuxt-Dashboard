@@ -177,9 +177,20 @@ export const useProductsStore = defineStore('products', {
           method: 'POST',
           body: product,
         })
-        this.allProducts.unshift(response)
+
+        // DummyJSON returns partial data, merge with input to keep all fields
+        // Generate unique local ID to avoid conflicts
+        const maxId = Math.max(...this.allProducts.map(p => p.id), 0)
+        const newProduct: Product = {
+          ...product,
+          ...response,
+          id: maxId + 1, // Use local unique ID
+        }
+
+        this.allProducts.unshift(newProduct)
+        this.total += 1
         this.applyFiltersAndSort()
-        return response
+        return newProduct
       } catch (error: any) {
         this.error = error.message || 'Failed to add product'
         throw error
@@ -201,11 +212,17 @@ export const useProductsStore = defineStore('products', {
 
         const index = this.allProducts.findIndex(p => p.id === id)
         if (index !== -1) {
-          this.allProducts[index] = response
+          // DummyJSON returns partial data, merge with existing to keep all fields
+          this.allProducts[index] = {
+            ...this.allProducts[index],
+            ...product,
+            ...response,
+            id, // Ensure ID stays the same
+          }
         }
         this.applyFiltersAndSort()
 
-        return response
+        return this.allProducts[index]
       } catch (error: any) {
         this.error = error.message || 'Failed to update product'
         throw error
@@ -226,6 +243,7 @@ export const useProductsStore = defineStore('products', {
 
         this.allProducts = this.allProducts.filter(p => p.id !== id)
         this.selectedIds = this.selectedIds.filter(selectedId => selectedId !== id)
+        this.total = Math.max(0, this.total - 1)
         this.applyFiltersAndSort()
       } catch (error: any) {
         this.error = error.message || 'Failed to delete product'
@@ -254,6 +272,7 @@ export const useProductsStore = defineStore('products', {
         // Remove from local state
         this.allProducts = this.allProducts.filter(p => !ids.includes(p.id))
         this.selectedIds = []
+        this.total = Math.max(0, this.total - ids.length)
         this.applyFiltersAndSort()
 
         return ids.length

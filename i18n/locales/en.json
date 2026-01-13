@@ -166,6 +166,9 @@
     "settings": "Settings",
     "profile": "Profile"
   },
+  "profile": {
+    "subtitle": "View and manage your personal information"
+  },
   "table": {
     "productName": "Product Name",
     "location": "Location",

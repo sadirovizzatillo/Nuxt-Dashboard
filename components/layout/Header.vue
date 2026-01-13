@@ -6,21 +6,21 @@
           borderBottomColor: themeStore.isDark ? '#273142' : '#f0f0f0'
         }"
     >
-      <div class="flex items-center gap-2 md:gap-4">
-        <!-- Mobile Burger Menu (visible on mobile only) -->
+      <div class="flex items-center gap-2 lg:gap-4">
+        <!-- Mobile/Tablet Burger Menu (visible on mobile and tablet) -->
         <a-button
             type="text"
             @click="themeStore.toggleMobileMenu()"
-            class="trigger text-gray-600 dark:text-gray-300 md:hidden"
+            class="trigger text-gray-600 dark:text-gray-300 lg:hidden"
         >
           <MenuOutlined />
         </a-button>
 
-        <!-- Desktop Sidebar Toggle (visible on md and up) -->
+        <!-- Desktop Sidebar Toggle (visible on lg and up) -->
         <a-button
             type="text"
             @click="themeStore.toggleSidebar()"
-            class="trigger text-gray-600 dark:text-gray-300 hidden md:flex"
+            class="trigger text-gray-600 dark:text-gray-300 hidden lg:flex"
         >
           <MenuFoldOutlined v-if="!themeStore.sidebarCollapsed" />
           <MenuUnfoldOutlined v-else />

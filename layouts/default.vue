@@ -17,7 +17,13 @@ const isMobile = ref(false)
 
 const checkMobile = () => {
   if (process.client) {
-    isMobile.value = window.innerWidth < 768
+    const wasTabletOrMobile = isMobile.value
+    isMobile.value = window.innerWidth < 1024 // lg breakpoint
+
+    // Close mobile menu when resizing to desktop
+    if (wasTabletOrMobile && !isMobile.value) {
+      themeStore.closeMobileMenu()
+    }
   }
 }
 
