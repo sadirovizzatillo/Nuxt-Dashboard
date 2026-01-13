@@ -1,0 +1,1211 @@
+@import 'ant-design-vue/dist/reset.css';
+
+/* Dark theme overrides for Ant Design components */
+.dark {
+  /* Base background */
+  background-color: #1B2431;
+}
+
+/* Layout components */
+.dark .ant-layout {
+  background-color: #1B2431;
+}
+
+.dark .ant-layout-sider {
+  background-color: #273142 !important;
+}
+
+.dark .ant-layout-header {
+  background-color: #273142 !important;
+}
+
+.dark .ant-layout-content {
+  background-color: #1B2431;
+}
+
+/* Card */
+.dark .ant-card {
+  background-color: #273142;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.dark .ant-card-head {
+  background-color: #273142;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.dark .ant-card-body {
+  background-color: #273142;
+}
+
+/* ==================== TABLE STYLES ==================== */
+
+/* Table - Light Theme */
+.ant-table {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.ant-table-wrapper {
+  background-color: transparent;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #f9fafb !important;
+  color: #374151 !important;
+  border-color: #e5e7eb !important;
+  font-weight: 600;
+}
+
+.ant-table-thead > tr > th::before {
+  background-color: #e5e7eb !important;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-color: #e5e7eb;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: #f3f4f6 !important;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background-color: #f3f4f6 !important;
+}
+
+.ant-table-cell-fix-left,
+.ant-table-cell-fix-right {
+  background-color: #ffffff !important;
+}
+
+.ant-table-tbody > tr:hover > td.ant-table-cell-fix-left,
+.ant-table-tbody > tr:hover > td.ant-table-cell-fix-right {
+  background-color: #f3f4f6 !important;
+}
+
+.ant-table-container {
+  border-color: #e5e7eb;
+}
+
+.ant-table-placeholder {
+  background-color: #ffffff;
+}
+
+/* Table - Dark Theme */
+.dark .ant-table {
+  background-color: #273142;
+  color: #e5e7eb;
+}
+
+.dark .ant-table-wrapper {
+  background-color: #273142;
+}
+
+.dark .ant-table-thead > tr > th {
+  background-color: #1f2937 !important;
+  color: #e5e7eb !important;
+  border-color: #374151 !important;
+  border-bottom: 1px solid #374151 !important;
+  font-weight: 600;
+}
+
+.dark .ant-table-thead > tr > th::before {
+  background-color: #374151 !important;
+}
+
+.dark .ant-table-tbody > tr > td {
+  background-color: #273142;
+  color: #e5e7eb;
+  border-bottom: 1px solid #374151 !important;
+    border-top: none !important;
+}
+
+.dark .ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
+
+.dark .ant-table-tbody > tr:hover > td {
+  background-color: #323D4E !important;
+}
+
+.dark .ant-table-tbody > tr.ant-table-row:hover > td {
+  background-color: #323D4E !important;
+}
+
+.dark .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Fix white background on focus/active/visited states */
+.dark .ant-table-tbody > tr > td:focus,
+.dark .ant-table-tbody > tr > td:active,
+.dark .ant-table-tbody > tr > td:visited,
+.dark .ant-table-tbody > tr:focus > td,
+.dark .ant-table-tbody > tr:active > td,
+.dark .ant-table-tbody > tr.ant-table-row:focus > td,
+.dark .ant-table-tbody > tr.ant-table-row:active > td {
+  background-color: #273142 !important;
+}
+
+.dark .ant-table-tbody > tr.ant-table-row-selected:focus > td,
+.dark .ant-table-tbody > tr.ant-table-row-selected:active > td {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Fix cell click/focus state */
+.dark .ant-table-cell-row-hover {
+  background-color: #323D4E !important;
+}
+
+.dark .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background-color: #323D4E !important;
+}
+
+/* Reset any white backgrounds from Ant Design */
+.dark .ant-table-tbody > tr > td[style*="background"] {
+  background-color: #273142 !important;
+}
+
+.dark .ant-table-container {
+  border-color: #374151;
+}
+
+.dark .ant-table-container table {
+  border-color: #374151;
+}
+
+.dark .ant-table-cell-fix-left,
+.dark .ant-table-cell-fix-right {
+  background-color: #273142 !important;
+}
+
+.dark .ant-table-tbody > tr:hover > td.ant-table-cell-fix-left,
+.dark .ant-table-tbody > tr:hover > td.ant-table-cell-fix-right {
+  background-color: #323D4E !important;
+}
+
+.dark .ant-table-placeholder {
+  background-color: #273142;
+}
+
+.dark .ant-table-placeholder:hover > td {
+  background-color: #273142 !important;
+}
+
+/* Empty state */
+.dark .ant-empty-description {
+  color: #9ca3af;
+}
+
+.dark .ant-empty-img-simple-ellipse {
+  fill: #374151;
+}
+
+.dark .ant-empty-img-simple-path {
+  fill: #4b5563;
+}
+
+.dark .ant-empty-img-simple-g {
+  stroke: #6b7280;
+}
+
+/* Table sorting icons */
+.dark .ant-table-column-sorter {
+  color: #6b7280;
+}
+
+.dark .ant-table-column-sorter-up.active,
+.dark .ant-table-column-sorter-down.active {
+  color: #3b82f6;
+}
+
+/* Table filter */
+.dark .ant-table-filter-trigger {
+  color: #6b7280;
+}
+
+.dark .ant-table-filter-trigger:hover {
+  color: #e5e7eb;
+  background-color: #374151;
+}
+
+.dark .ant-table-filter-trigger.active {
+  color: #3b82f6;
+}
+
+.dark .ant-table-filter-dropdown {
+  background-color: #273142;
+  color: #e5e7eb;
+}
+
+.dark .ant-table-filter-dropdown-btns {
+  border-color: #374151;
+  background-color: #273142;
+}
+
+/* Table expanded row */
+.dark .ant-table-expanded-row > td {
+  background-color: #1f2937 !important;
+}
+
+/* Table footer */
+.dark .ant-table-footer {
+  background-color: #273142;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+/* Table summary */
+.dark .ant-table-summary {
+  background-color: #273142;
+}
+
+.dark .ant-table-summary > tr > td {
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+/* Table loading */
+.dark .ant-table-tbody > tr.ant-table-placeholder {
+  background-color: #273142;
+}
+
+.dark .ant-spin-nested-loading > div > .ant-spin {
+  background-color: rgba(39, 49, 66, 0.7);
+}
+
+/* Table bordered */
+.dark .ant-table-bordered > .ant-table-container {
+  border-color: #374151;
+}
+
+.dark .ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th,
+.dark .ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td {
+  border-color: #374151;
+}
+
+/* ==================== END TABLE STYLES ==================== */
+
+/* Menu */
+.dark .ant-menu {
+  background-color: transparent !important;
+  color: #e5e7eb;
+}
+
+.dark .ant-menu-item {
+  color: #d1d5db;
+}
+
+.dark .ant-menu-item:hover {
+  color: #ffffff;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.dark .ant-menu-item-selected {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  color: #60a5fa;
+}
+
+/* Dropdown */
+.dark .ant-dropdown-menu {
+  background-color: #273142;
+}
+
+.dark .ant-dropdown-menu-item {
+  color: #e5e7eb;
+}
+
+.dark .ant-dropdown-menu-item:hover {
+  background-color: #374151;
+}
+
+/* Modal */
+.dark .ant-modal-content {
+  background-color: #273142;
+  color: #e5e7eb;
+}
+
+.dark .ant-modal-header {
+  background-color: #273142;
+  border-color: #374151;
+}
+
+.dark .ant-modal-title {
+  color: #e5e7eb;
+}
+
+.dark .ant-modal-close {
+  color: #9ca3af;
+}
+
+.dark .ant-modal-footer {
+  border-color: #374151;
+}
+
+/* Drawer */
+.dark .ant-drawer-content {
+  background-color: #273142;
+}
+
+.dark .ant-drawer-header {
+  background-color: #273142;
+  border-color: #374151;
+}
+
+.dark .ant-drawer-title {
+  color: #e5e7eb;
+}
+
+.dark .ant-drawer-close {
+  color: #9ca3af;
+}
+
+.dark .ant-drawer-body {
+  background-color: #273142;
+  color: #e5e7eb;
+}
+
+/* Form */
+.ant-form-item-label > label {
+  color: #374151;
+  font-weight: 500;
+}
+
+.dark .ant-form-item-label > label {
+  color: #e5e7eb;
+}
+
+/* ==================== FILTER & HEADER INPUT STYLES (Default Style) ==================== */
+/* These styles apply to inputs outside modals/drawers (filters, header search) */
+
+/* Input - Dark Theme (Filters/Header) */
+.dark .ant-input {
+  background-color: #323D4E;
+  border-color: #404D61;
+  color: #e5e7eb;
+}
+
+.dark .ant-input:hover {
+  border-color: #4b5a70;
+}
+
+.dark .ant-input:focus {
+  border-color: #1890ff;
+}
+
+.dark .ant-input::placeholder {
+  color: #6b7280;
+}
+
+/* Input Affix Wrapper - Dark Theme (Filters/Header) */
+.dark .ant-input-affix-wrapper {
+  background-color: #323D4E;
+  border-color: #404D61;
+}
+
+.dark .ant-input-affix-wrapper .ant-input {
+  background-color: transparent;
+  color: #e5e7eb;
+}
+
+.dark .ant-input-affix-wrapper:hover {
+  border-color: #4b5a70;
+}
+
+.dark .ant-input-affix-wrapper-focused {
+  border-color: #1890ff;
+}
+
+/* Input Number - Dark Theme (Filters/Header) */
+.dark .ant-input-number {
+  background-color: #323D4E;
+  border-color: #404D61;
+}
+
+.dark .ant-input-number:hover {
+  border-color: #4b5a70;
+}
+
+.dark .ant-input-number-focused {
+  border-color: #1890ff;
+}
+
+.dark .ant-input-number-input {
+  color: #e5e7eb;
+  background-color: transparent;
+}
+
+.dark .ant-input-number-handler-wrap {
+  background-color: #3a4556;
+  border-left-color: #404D61;
+}
+
+.dark .ant-input-number-handler {
+  border-color: #404D61;
+}
+
+.dark .ant-input-number-handler:hover {
+  background-color: #4b5a70;
+}
+
+.dark .ant-input-number-handler-up-inner,
+.dark .ant-input-number-handler-down-inner {
+  color: #9ca3af;
+}
+
+/* Select - Dark Theme (Filters/Header) */
+.dark .ant-select-selector {
+  background-color: #323D4E !important;
+  border-color: #404D61 !important;
+}
+
+.dark .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #4b5a70 !important;
+}
+
+.dark .ant-select-focused .ant-select-selector {
+  border-color: #1890ff !important;
+}
+
+.dark .ant-select-selection-item {
+  color: #e5e7eb;
+}
+
+.dark .ant-select-selection-placeholder {
+  color: #6b7280;
+}
+
+.dark .ant-select-arrow {
+  color: #6b7280;
+}
+
+.dark .ant-select-clear {
+  background-color: #323D4E;
+  color: #6b7280;
+}
+
+/* Select Dropdown - Dark Theme */
+.dark .ant-select-dropdown {
+  background-color: #273142;
+  border-color: #374151;
+}
+
+.dark .ant-select-item {
+  color: #e5e7eb;
+}
+
+.dark .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #323D4E;
+}
+
+.dark .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: rgba(24, 144, 255, 0.2);
+}
+
+/* Search Input - Dark Theme (Header) */
+.dark .ant-input-search .ant-input-group-addon {
+  background-color: transparent;
+}
+
+.dark .ant-input-search .ant-input-search-button {
+  border-color: #404D61;
+  background-color: #3a4556;
+}
+
+.dark .ant-input-search .ant-input-search-button:hover {
+  background-color: #4b5a70;
+  border-color: #4b5a70;
+}
+
+/* Input Group - Dark Theme (Price Range) */
+.dark .ant-input-group .ant-input-number {
+  border-color: #404D61;
+}
+
+/* ==================== END FILTER & HEADER INPUT STYLES ==================== */
+
+/* ==================== MODAL/DRAWER FORM INPUT STYLES ==================== */
+/* These styles only apply to inputs inside modals and drawers */
+
+/* Input - Light Theme (Modal/Drawer only) */
+.ant-modal .ant-input,
+.ant-drawer .ant-input {
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  border: 1px solid #e5e7eb !important;
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-modal .ant-input:hover,
+.ant-drawer .ant-input:hover {
+  border-color: #d1d5db !important;
+}
+
+.ant-modal .ant-input:focus,
+.ant-drawer .ant-input:focus,
+.ant-modal .ant-input-focused,
+.ant-drawer .ant-input-focused {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+.ant-modal .ant-input::placeholder,
+.ant-drawer .ant-input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Input Affix Wrapper - Light Theme (Modal/Drawer only) */
+.ant-modal .ant-input-affix-wrapper,
+.ant-drawer .ant-input-affix-wrapper {
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  border: 1px solid #e5e7eb !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-modal .ant-input-affix-wrapper .ant-input,
+.ant-drawer .ant-input-affix-wrapper .ant-input {
+  padding: 2px 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-modal .ant-input-affix-wrapper:hover,
+.ant-drawer .ant-input-affix-wrapper:hover {
+  border-color: #d1d5db !important;
+}
+
+.ant-modal .ant-input-affix-wrapper:focus,
+.ant-drawer .ant-input-affix-wrapper:focus,
+.ant-modal .ant-input-affix-wrapper-focused,
+.ant-drawer .ant-input-affix-wrapper-focused {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Textarea - Light Theme (Modal/Drawer only) */
+.ant-modal .ant-input-textarea .ant-input,
+.ant-drawer .ant-input-textarea .ant-input,
+.ant-modal textarea.ant-input,
+.ant-drawer textarea.ant-input {
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  min-height: 80px;
+}
+
+/* Input Number - Light Theme (Modal/Drawer only) */
+.ant-modal .ant-input-number,
+.ant-drawer .ant-input-number {
+  border-radius: 8px !important;
+  border: 1px solid #e5e7eb !important;
+  background-color: #ffffff !important;
+  overflow: hidden;
+  transition: all 0.2s ease !important;
+}
+
+.ant-modal .ant-input-number:hover,
+.ant-drawer .ant-input-number:hover {
+  border-color: #d1d5db !important;
+}
+
+.ant-modal .ant-input-number:focus,
+.ant-drawer .ant-input-number:focus,
+.ant-modal .ant-input-number-focused,
+.ant-drawer .ant-input-number-focused {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+.ant-modal .ant-input-number-input,
+.ant-drawer .ant-input-number-input {
+  padding: 6px 12px !important;
+  height: auto !important;
+  color: #1f2937 !important;
+}
+
+.ant-modal .ant-input-number-handler-wrap,
+.ant-drawer .ant-input-number-handler-wrap {
+  border-radius: 0 8px 8px 0 !important;
+  background-color: #f9fafb !important;
+  border-left: 1px solid #e5e7eb !important;
+}
+
+.ant-modal .ant-input-number-handler,
+.ant-drawer .ant-input-number-handler {
+  border-color: #e5e7eb !important;
+}
+
+.ant-modal .ant-input-number-handler:hover,
+.ant-drawer .ant-input-number-handler:hover {
+  background-color: #f3f4f6 !important;
+}
+
+.ant-modal .ant-input-number-handler-up-inner,
+.ant-drawer .ant-input-number-handler-up-inner,
+.ant-modal .ant-input-number-handler-down-inner,
+.ant-drawer .ant-input-number-handler-down-inner {
+  color: #6b7280 !important;
+}
+
+/* Input Number with addon (Modal/Drawer only) */
+.ant-modal .ant-input-number-group-addon,
+.ant-drawer .ant-input-number-group-addon {
+  border-radius: 0 8px 8px 0 !important;
+  background-color: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+  border-left: none !important;
+  color: #6b7280 !important;
+  padding: 0 12px !important;
+}
+
+.ant-modal .ant-input-number-group .ant-input-number,
+.ant-drawer .ant-input-number-group .ant-input-number {
+  border-radius: 8px 0 0 8px !important;
+}
+
+/* Select - Light Theme (Modal/Drawer only) */
+.ant-modal .ant-select-selector,
+.ant-drawer .ant-select-selector {
+  border-radius: 8px !important;
+  padding: 4px 12px !important;
+  border: 1px solid #e5e7eb !important;
+  background-color: #ffffff !important;
+  min-height: 40px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-modal .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.ant-drawer .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #d1d5db !important;
+}
+
+.ant-modal .ant-select-focused .ant-select-selector,
+.ant-drawer .ant-select-focused .ant-select-selector {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+.ant-modal .ant-select-selection-item,
+.ant-drawer .ant-select-selection-item {
+  line-height: 30px !important;
+}
+
+.ant-modal .ant-select-selection-placeholder,
+.ant-drawer .ant-select-selection-placeholder {
+  line-height: 30px !important;
+}
+
+/* Multi Select Tags (Modal/Drawer only) */
+.ant-modal .ant-select-multiple .ant-select-selection-item,
+.ant-drawer .ant-select-multiple .ant-select-selection-item {
+  border-radius: 6px !important;
+  background-color: #eef2ff !important;
+  border: none !important;
+  color: #6366f1 !important;
+  padding: 2px 8px !important;
+  margin: 2px 4px 2px 0 !important;
+  line-height: 22px !important;
+}
+
+.ant-modal .ant-select-multiple .ant-select-selection-item-remove,
+.ant-drawer .ant-select-multiple .ant-select-selection-item-remove {
+  color: #6366f1 !important;
+}
+
+/* ==================== DARK THEME MODAL/DRAWER FORM INPUTS ==================== */
+
+/* Input - Dark Theme (Modal/Drawer only) */
+.dark .ant-modal .ant-input,
+.dark .ant-drawer .ant-input {
+  background-color: #323D4E !important;
+  border-color: #404D61 !important;
+  color: #e5e7eb !important;
+}
+
+.dark .ant-modal .ant-input:hover,
+.dark .ant-drawer .ant-input:hover {
+  border-color: #4b5a70 !important;
+}
+
+.dark .ant-modal .ant-input:focus,
+.dark .ant-drawer .ant-input:focus,
+.dark .ant-modal .ant-input-focused,
+.dark .ant-drawer .ant-input-focused {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+.dark .ant-modal .ant-input::placeholder,
+.dark .ant-drawer .ant-input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Input Affix Wrapper - Dark Theme (Modal/Drawer only) */
+.dark .ant-modal .ant-input-affix-wrapper,
+.dark .ant-drawer .ant-input-affix-wrapper {
+  background-color: #323D4E !important;
+  border-color: #404D61 !important;
+}
+
+.dark .ant-modal .ant-input-affix-wrapper .ant-input,
+.dark .ant-drawer .ant-input-affix-wrapper .ant-input {
+  background-color: transparent !important;
+  color: #e5e7eb !important;
+}
+
+.dark .ant-modal .ant-input-affix-wrapper:hover,
+.dark .ant-drawer .ant-input-affix-wrapper:hover {
+  border-color: #4b5a70 !important;
+}
+
+.dark .ant-modal .ant-input-affix-wrapper:focus,
+.dark .ant-drawer .ant-input-affix-wrapper:focus,
+.dark .ant-modal .ant-input-affix-wrapper-focused,
+.dark .ant-drawer .ant-input-affix-wrapper-focused {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Input Number - Dark Theme (Modal/Drawer only) */
+.dark .ant-modal .ant-input-number,
+.dark .ant-drawer .ant-input-number {
+  background-color: #323D4E !important;
+  border-color: #404D61 !important;
+}
+
+.dark .ant-modal .ant-input-number:hover,
+.dark .ant-drawer .ant-input-number:hover {
+  border-color: #4b5a70 !important;
+}
+
+.dark .ant-modal .ant-input-number:focus,
+.dark .ant-drawer .ant-input-number:focus,
+.dark .ant-modal .ant-input-number-focused,
+.dark .ant-drawer .ant-input-number-focused {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+.dark .ant-modal .ant-input-number-input,
+.dark .ant-drawer .ant-input-number-input {
+  color: #e5e7eb !important;
+  background-color: transparent !important;
+}
+
+.dark .ant-modal .ant-input-number-input::placeholder,
+.dark .ant-drawer .ant-input-number-input::placeholder {
+  color: #6b7280 !important;
+}
+
+.dark .ant-modal .ant-input-number-handler-wrap,
+.dark .ant-drawer .ant-input-number-handler-wrap {
+  background-color: #3a4556 !important;
+  border-left-color: #404D61 !important;
+}
+
+.dark .ant-modal .ant-input-number-handler,
+.dark .ant-drawer .ant-input-number-handler {
+  border-color: #404D61 !important;
+}
+
+.dark .ant-modal .ant-input-number-handler:hover,
+.dark .ant-drawer .ant-input-number-handler:hover {
+  background-color: #4b5a70 !important;
+}
+
+.dark .ant-modal .ant-input-number-handler-up-inner,
+.dark .ant-drawer .ant-input-number-handler-up-inner,
+.dark .ant-modal .ant-input-number-handler-down-inner,
+.dark .ant-drawer .ant-input-number-handler-down-inner {
+  color: #9ca3af !important;
+}
+
+.dark .ant-modal .ant-input-number-group-addon,
+.dark .ant-drawer .ant-input-number-group-addon {
+  background-color: #3a4556 !important;
+  border-color: #404D61 !important;
+  color: #9ca3af !important;
+}
+
+/* Select - Dark Theme (Modal/Drawer only) */
+.dark .ant-modal .ant-select-selector,
+.dark .ant-drawer .ant-select-selector {
+  background-color: #323D4E !important;
+  border-color: #404D61 !important;
+}
+
+.dark .ant-modal .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.dark .ant-drawer .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #4b5a70 !important;
+}
+
+.dark .ant-modal .ant-select-focused .ant-select-selector,
+.dark .ant-drawer .ant-select-focused .ant-select-selector {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+
+.dark .ant-modal .ant-select-selection-item,
+.dark .ant-drawer .ant-select-selection-item {
+  color: #e5e7eb !important;
+}
+
+.dark .ant-modal .ant-select-selection-placeholder,
+.dark .ant-drawer .ant-select-selection-placeholder {
+  color: #6b7280 !important;
+}
+
+/* Multi Select Tags - Dark Theme (Modal/Drawer only) */
+.dark .ant-modal .ant-select-multiple .ant-select-selection-item,
+.dark .ant-drawer .ant-select-multiple .ant-select-selection-item {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  color: #a5b4fc !important;
+}
+
+.dark .ant-modal .ant-select-multiple .ant-select-selection-item-remove,
+.dark .ant-drawer .ant-select-multiple .ant-select-selection-item-remove {
+  color: #a5b4fc !important;
+}
+
+/* ==================== END MODAL/DRAWER FORM INPUT STYLES ==================== */
+
+/* Button */
+.dark .ant-btn-default {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.dark .ant-btn-default:hover {
+  background-color: #4b5563;
+  border-color: #6b7280;
+  color: #ffffff;
+}
+
+.dark .ant-btn-text {
+  color: #e5e7eb;
+}
+
+.dark .ant-btn-text:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== PAGINATION STYLES ==================== */
+
+/* Pagination - Light Theme */
+.ant-pagination-total-text {
+  color: #374151;
+}
+
+/* Pagination - Dark Theme */
+.dark .ant-pagination-item {
+  background-color: #273142;
+  border-color: #374151;
+}
+
+.dark .ant-pagination-item a {
+  color: #e5e7eb;
+}
+
+.dark .ant-pagination-item:hover {
+  border-color: #3b82f6;
+}
+
+.dark .ant-pagination-item:hover a {
+  color: #3b82f6;
+}
+
+.dark .ant-pagination-item-active {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.dark .ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.dark .ant-pagination-prev .ant-pagination-item-link,
+.dark .ant-pagination-next .ant-pagination-item-link {
+  background-color: #273142;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.dark .ant-pagination-prev:hover .ant-pagination-item-link,
+.dark .ant-pagination-next:hover .ant-pagination-item-link {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.dark .ant-pagination-disabled .ant-pagination-item-link {
+  color: #4b5563 !important;
+  border-color: #374151 !important;
+  background-color: #1f2937 !important;
+}
+
+.dark .ant-pagination-total-text {
+  color: #9ca3af;
+}
+
+.dark .ant-pagination-options .ant-select-selector {
+  background-color: #273142 !important;
+}
+
+.dark .ant-pagination-options-quick-jumper {
+  color: #e5e7eb;
+}
+
+.dark .ant-pagination-options-quick-jumper input {
+  background-color: #273142;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+/* ==================== END PAGINATION STYLES ==================== */
+
+/* Badge */
+.dark .ant-badge-count {
+  box-shadow: 0 0 0 1px #273142;
+}
+
+/* Rate (Star Rating) */
+.dark .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-first,
+.dark .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-second {
+  color: #4b5563;
+}
+
+/* Popconfirm */
+.dark .ant-popconfirm-message-title {
+  color: #e5e7eb;
+}
+
+.dark .ant-popconfirm-description {
+  color: #9ca3af;
+}
+
+/* Divider */
+.dark .ant-divider {
+  border-color: #374151;
+}
+
+/* Descriptions */
+.dark .ant-descriptions-item-label {
+  color: #9ca3af;
+}
+
+.dark .ant-descriptions-item-content {
+  color: #e5e7eb;
+}
+
+.dark .ant-descriptions-bordered .ant-descriptions-item-label {
+  background-color: #1f2937;
+}
+
+/* Tabs */
+.dark .ant-tabs-tab {
+  color: #9ca3af;
+}
+
+.dark .ant-tabs-tab:hover {
+  color: #e5e7eb;
+}
+
+.dark .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #3b82f6;
+}
+
+.dark .ant-tabs-ink-bar {
+  background-color: #3b82f6;
+}
+
+/* Tag */
+.dark .ant-tag {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+/* Statistic */
+.dark .ant-statistic-title {
+  color: #9ca3af;
+}
+
+.dark .ant-statistic-content {
+  color: #e5e7eb;
+}
+
+/* Spin */
+.dark .ant-spin-text {
+  color: #e5e7eb;
+}
+
+/* Avatar */
+.dark .ant-avatar {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+/* Popover */
+.dark .ant-popover-inner {
+  background-color: #273142;
+}
+
+.dark .ant-popover-title {
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+.dark .ant-popover-inner-content {
+  color: #e5e7eb;
+}
+
+/* Tooltip */
+.dark .ant-tooltip-inner {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+/* Message */
+.dark .ant-message-notice-content {
+  background-color: #273142;
+  color: #e5e7eb;
+}
+
+/* Notification */
+.dark .ant-notification-notice {
+  background-color: #273142;
+  color: #e5e7eb;
+}
+
+/* Breadcrumb */
+.dark .ant-breadcrumb-link {
+  color: #9ca3af;
+}
+
+.dark .ant-breadcrumb-separator {
+  color: #6b7280;
+}
+
+/* Skeleton */
+.dark .ant-skeleton-content .ant-skeleton-title,
+.dark .ant-skeleton-content .ant-skeleton-paragraph > li {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+}
+
+/* Switch */
+.dark .ant-switch {
+  background-color: #4b5563;
+}
+
+/* Checkbox */
+.dark .ant-checkbox-inner {
+  background-color: #1f2937;
+  border-color: #4b5563;
+}
+
+/* Radio */
+.dark .ant-radio-inner {
+  background-color: #1f2937;
+  border-color: #4b5563;
+}
+
+/* DatePicker */
+.dark .ant-picker {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.dark .ant-picker-input > input {
+  color: #e5e7eb;
+}
+
+.dark .ant-picker-panel-container {
+  background-color: #273142;
+}
+
+.dark .ant-picker-header {
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+.dark .ant-picker-content th {
+  color: #9ca3af;
+}
+
+.dark .ant-picker-cell {
+  color: #e5e7eb;
+}
+
+.dark .ant-picker-cell:hover .ant-picker-cell-inner {
+  background-color: #374151;
+}
+
+/* Upload */
+.dark .ant-upload-drag {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.dark .ant-upload-drag:hover {
+  border-color: #3b82f6;
+}
+
+/* Progress */
+.dark .ant-progress-text {
+  color: #e5e7eb;
+}
+
+/* Alert */
+.dark .ant-alert {
+  border-color: #374151;
+}
+
+/* List */
+.dark .ant-list-item {
+  border-color: #374151;
+}
+
+.dark .ant-list-item-meta-title {
+  color: #e5e7eb;
+}
+
+.dark .ant-list-item-meta-description {
+  color: #9ca3af;
+}
+
+/* Collapse */
+.dark .ant-collapse {
+  background-color: #273142;
+  border-color: #374151;
+}
+
+.dark .ant-collapse-header {
+  color: #e5e7eb !important;
+}
+
+.dark .ant-collapse-content {
+  background-color: #273142;
+  border-color: #374151;
+}
+
+/* Timeline */
+.dark .ant-timeline-item-content {
+  color: #e5e7eb;
+}
+
+/* Steps */
+.dark .ant-steps-item-title {
+  color: #e5e7eb;
+}
+
+.dark .ant-steps-item-description {
+  color: #9ca3af;
+}
