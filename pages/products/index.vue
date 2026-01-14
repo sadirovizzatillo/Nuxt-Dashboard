@@ -215,7 +215,6 @@ import {
 } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
 import type { TableProps } from 'ant-design-vue'
-import * as XLSX from 'xlsx'
 
 definePageMeta({
   middleware: 'auth',
@@ -409,7 +408,7 @@ const handleSuccess = () => {
 }
 
 // Export handler
-const handleExport = () => {
+const handleExport = async () => {
   const productsToExport = productsStore.selectedIds.length > 0
     ? productsStore.products.filter(p => productsStore.selectedIds.includes(p.id))
     : productsStore.products
@@ -418,6 +417,8 @@ const handleExport = () => {
     message.warning(t('messages.noDataToExport'))
     return
   }
+
+  const XLSX = await import('xlsx')
 
   const data = productsToExport.map(p => ({
     ID: p.id,

@@ -131,7 +131,6 @@ import {
   EyeOutlined,
 } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
-import * as XLSX from 'xlsx'
 
 definePageMeta({
   middleware: 'auth',
@@ -216,13 +215,15 @@ const handleSuccess = () => {
   // Don't refetch - store already updates local state
 }
 
-const handleExport = () => {
+const handleExport = async () => {
   const users = usersStore.users
 
   if (users.length === 0) {
     message.warning(t('messages.noDataToExport'))
     return
   }
+
+  const XLSX = await import('xlsx')
 
   const data = users.map(u => ({
     ID: u.id,
