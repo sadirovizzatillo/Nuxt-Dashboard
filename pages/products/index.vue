@@ -215,6 +215,7 @@ import {
 } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
 import type { TableProps } from 'ant-design-vue'
+import * as XLSX from 'xlsx'
 
 definePageMeta({
   middleware: 'auth',
@@ -409,7 +410,32 @@ const handleSuccess = () => {
 
 // Export handler
 const handleExport = () => {
-  message.info(t('messages.exportComing'))
+  const productsToExport = productsStore.selectedIds.length > 0
+    ? productsStore.products.filter(p => productsStore.selectedIds.includes(p.id))
+    : productsStore.products
+
+  if (productsToExport.length === 0) {
+    message.warning(t('messages.noDataToExport'))
+    return
+  }
+
+  const data = productsToExport.map(p => ({
+    ID: p.id,
+    [t('products.productName')]: p.title,
+    [t('products.category')]: p.category,
+    [t('products.price')]: p.price,
+    [t('products.rating')]: p.rating,
+    [t('products.stock')]: p.stock,
+    [t('products.brand')]: p.brand || '',
+    SKU: p.sku,
+  }))
+
+  const ws = XLSX.utils.json_to_sheet(data)
+  const wb = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(wb, ws, 'Products')
+  XLSX.writeFile(wb, `products-${new Date().toISOString().split('T')[0]}.xlsx`)
+
+  message.success(t('messages.exportSuccess'))
 }
 
 // Fetch categories

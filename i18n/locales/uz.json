@@ -212,7 +212,9 @@
     "deleteSuccess": "Muvaffaqiyatli o'chirildi",
     "updateSuccess": "Muvaffaqiyatli yangilandi",
     "createSuccess": "Muvaffaqiyatli yaratildi",
-    "exportComing": "Eksport funksiyasi tez orada"
+    "exportComing": "Eksport funksiyasi tez orada",
+    "exportSuccess": "Mahsulotlar muvaffaqiyatli eksport qilindi",
+    "noDataToExport": "Eksport qilish uchun ma'lumot yo'q"
   },
   "errors": {
     "goHome": "Bosh sahifa",

@@ -212,7 +212,9 @@
     "deleteSuccess": "Успешно удалено",
     "updateSuccess": "Успешно обновлено",
     "createSuccess": "Успешно создано",
-    "exportComing": "Функция экспорта скоро появится"
+    "exportComing": "Функция экспорта скоро появится",
+    "exportSuccess": "Товары успешно экспортированы",
+    "noDataToExport": "Нет данных для экспорта"
   },
   "errors": {
     "goHome": "На главную",

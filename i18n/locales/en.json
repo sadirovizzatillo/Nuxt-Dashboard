@@ -212,7 +212,9 @@
     "deleteSuccess": "Deleted successfully",
     "updateSuccess": "Updated successfully",
     "createSuccess": "Created successfully",
-    "exportComing": "Export functionality coming soon"
+    "exportComing": "Export functionality coming soon",
+    "exportSuccess": "Products exported successfully",
+    "noDataToExport": "No data to export"
   },
   "errors": {
     "goHome": "Go Home",
