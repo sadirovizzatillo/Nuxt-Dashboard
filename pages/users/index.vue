@@ -131,6 +131,7 @@ import {
   EyeOutlined,
 } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
+import * as XLSX from 'xlsx'
 
 definePageMeta({
   middleware: 'auth',
@@ -216,7 +217,34 @@ const handleSuccess = () => {
 }
 
 const handleExport = () => {
-  message.info(t('messages.exportComing'))
+  const users = usersStore.users
+
+  if (users.length === 0) {
+    message.warning(t('messages.noDataToExport'))
+    return
+  }
+
+  const data = users.map(u => ({
+    ID: u.id,
+    [t('users.firstName')]: u.firstName,
+    [t('users.lastName')]: u.lastName,
+    [t('users.username')]: u.username,
+    [t('users.email')]: u.email,
+    [t('users.phone')]: u.phone,
+    [t('users.age')]: u.age,
+    [t('users.gender')]: u.gender === 'male' ? t('users.male') : t('users.female'),
+    [t('users.role')]: u.role || 'user',
+    [t('users.company')]: u.company?.name || '',
+    [t('users.city')]: u.address?.city || '',
+    [t('users.country')]: u.address?.country || '',
+  }))
+
+  const ws = XLSX.utils.json_to_sheet(data)
+  const wb = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(wb, ws, 'Users')
+  XLSX.writeFile(wb, `users-${new Date().toISOString().split('T')[0]}.xlsx`)
+
+  message.success(t('messages.exportSuccess'))
 }
 
 onMounted(() => {

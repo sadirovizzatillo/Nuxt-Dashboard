@@ -84,7 +84,7 @@
     "dimensions": "O'lchamlar",
     "width": "Eni",
     "height": "Bo'yi",
-    "depth": "Chuqurligi",
+    "depth": "Eni",
     "warrantyInformation": "Kafolat ma'lumoti",
     "shippingInformation": "Yetkazib berish ma'lumoti",
     "availabilityStatus": "Mavjudlik holati",
@@ -144,7 +144,7 @@
     "personalInfo": "Shaxsiy ma'lumotlar",
     "companyInfo": "Kompaniya ma'lumotlari",
     "allGenders": "Barcha jinslar",
-    "maidenName": "Qizlik familiyasi",
+    "maidenName": "Otasining ismi",
     "eyeColor": "Ko'z rangi",
     "hairInfo": "Soch ma'lumotlari",
     "hairColor": "Soch rangi",
@@ -213,7 +213,7 @@
     "updateSuccess": "Muvaffaqiyatli yangilandi",
     "createSuccess": "Muvaffaqiyatli yaratildi",
     "exportComing": "Eksport funksiyasi tez orada",
-    "exportSuccess": "Mahsulotlar muvaffaqiyatli eksport qilindi",
+    "exportSuccess": "Muvaffaqiyatli eksport qilindi",
     "noDataToExport": "Eksport qilish uchun ma'lumot yo'q"
   },
   "errors": {

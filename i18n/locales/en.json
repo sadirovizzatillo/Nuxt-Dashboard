@@ -144,7 +144,7 @@
     "personalInfo": "Personal Information",
     "companyInfo": "Company Information",
     "allGenders": "All Genders",
-    "maidenName": "Maiden Name",
+    "maidenName": "Father Name",
     "eyeColor": "Eye Color",
     "hairInfo": "Hair Information",
     "hairColor": "Hair Color",
@@ -213,7 +213,7 @@
     "updateSuccess": "Updated successfully",
     "createSuccess": "Created successfully",
     "exportComing": "Export functionality coming soon",
-    "exportSuccess": "Products exported successfully",
+    "exportSuccess": "Exported successfully",
     "noDataToExport": "No data to export"
   },
   "errors": {

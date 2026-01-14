@@ -144,7 +144,7 @@
     "personalInfo": "Личная информация",
     "companyInfo": "Информация о компании",
     "allGenders": "Все",
-    "maidenName": "Девичья фамилия",
+    "maidenName": "Имя отца",
     "eyeColor": "Цвет глаз",
     "hairInfo": "Информация о волосах",
     "hairColor": "Цвет волос",
@@ -213,7 +213,7 @@
     "updateSuccess": "Успешно обновлено",
     "createSuccess": "Успешно создано",
     "exportComing": "Функция экспорта скоро появится",
-    "exportSuccess": "Товары успешно экспортированы",
+    "exportSuccess": "Успешно экспортировано",
     "noDataToExport": "Нет данных для экспорта"
   },
   "errors": {
