@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     build: {
         transpile: ['chart.js', 'vue-chartjs']
     },
-    // Runtime config
     runtimeConfig: {
         public: {
             apiBase: 'https://dummyjson.com'

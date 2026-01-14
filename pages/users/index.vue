@@ -212,7 +212,7 @@ const handleDelete = async (id: number) => {
 const handleSuccess = () => {
   showAddModal.value = false
   selectedUser.value = null
-  usersStore.fetchUsers()
+  // Don't refetch - store already updates local state
 }
 
 const handleExport = () => {

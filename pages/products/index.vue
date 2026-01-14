@@ -404,7 +404,7 @@ const handleBulkDelete = async () => {
 const handleSuccess = () => {
   showAddModal.value = false
   selectedProduct.value = null
-  productsStore.fetchProducts()
+  // Don't refetch - store already updates local state
 }
 
 // Export handler
